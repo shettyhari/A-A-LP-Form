@@ -1,4 +1,5 @@
 {
+  "cleanUrls": true,
   "rewrites": [
     { "source": "/submit", "destination": "https://franchise.adhiraandappacoffee.com/submit" }
   ]

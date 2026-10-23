@@ -149,10 +149,6 @@
     .sa__btn--ghost:hover { background: var(--cream-2); }
     .sa__consent { color: var(--muted); font-size: 11.5px; text-align: center; margin: 14px 0 0; }
 
-    /* ---------- Thank you ---------- */
-    .sa-done { text-align: center; padding: 10px 0 0; }
-    .sa-done__icon { width: 64px; height: 64px; margin: 24px auto 0; border-radius: 50%; background: var(--maroon); color: var(--gold); display: grid; place-items: center; font-size: 30px; }
-
     .sa__toast {
       position: fixed; left: 50%; bottom: 20px; transform: translateX(-50%);
       max-width: calc(100% - 32px); width: 440px;
@@ -283,13 +279,6 @@
           </div>
           <p class="sa__consent">By submitting, you agree to be contacted by Adhira &amp; Appa Coffee by call, SMS, email or WhatsApp.</p>
         </section>
-
-        <!-- ===== Done ===== -->
-        <section class="sa__step sa-done" id="stepDone" hidden>
-          <div class="sa-done__icon" aria-hidden="true">✓</div>
-          <h2 class="sa__step-title">Thank you!</h2>
-          <p class="sa__step-intro">Your application has been received. An Adhira &amp; Appa franchise advisor will reach out within 24 hours.</p>
-        </section>
       </form>
 
       <footer class="sa__footer">
@@ -305,11 +294,11 @@
     (function () {
       // Same endpoint and payload keys as the current franchise site; on Vercel, vercel.json proxies /submit to it
       const SUBMIT_URL = "/submit";
+      const THANK_YOU_URL = "/thank-you";
 
       const form = document.getElementById("leadForm");
       const step1 = document.getElementById("step1");
       const step2 = document.getElementById("step2");
-      const stepDone = document.getElementById("stepDone");
       const bar = document.getElementById("progressBar");
       const submitBtn = document.getElementById("submitBtn");
       const toast = document.getElementById("toast");
@@ -352,7 +341,7 @@
       }
 
       function show(step, progress) {
-        [step1, step2, stepDone].forEach(s => { s.hidden = s !== step; });
+        [step1, step2].forEach(s => { s.hidden = s !== step; });
         bar.style.width = progress;
         window.scrollTo({ top: 0, behavior: "smooth" });
       }
@@ -419,7 +408,9 @@
           if (!result.success) throw new Error(result.message || "Lead could not be submitted. Please try again.");
 
           window.dataLayer && dataLayer.push({ event: "lead_submit", lead_investment: data.investment });
-          show(stepDone, "100%");
+          try { sessionStorage.setItem("aa_lead_first_name", data.name.split(/\s+/)[0]); } catch (e) {}
+          window.location.href = THANK_YOU_URL;
+          return;
         } catch (err) {
           console.error("Lead form submit failed:", err);
           showToast(err.message && !/fetch|JSON/i.test(err.message) ? err.message : "Something went wrong. Please check your internet and try again.");
