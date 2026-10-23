@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Apply | Adhira &amp; Appa Coffee Franchise</title>
+  <meta name="description" content="Own an Adhira & Appa Coffee franchise. Business partner-owned, A&A-operated cafes from ₹70 Lakhs with monthly minimum payout protection. Apply in 2 minutes.">
+  <meta name="theme-color" content="#4A0F06">
+  <link rel="icon" href="/favicon.ico">
+
+  <!-- Google Tag Manager (same container as the current franchise site) -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-WK2HH7DV');</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --maroon: #5C1409;
+      --maroon-deep: #3A0B05;
+      --cream: #F8EEDF;
+      --cream-2: #FBF6EE;
+      --gold: #E8B56A;
+      --gold-deep: #B9782F;
+      --ink: #2B1A14;
+      --muted: #6E5A50;
+      --line: #E6D9C8;
+      --error: #B3261E;
+      --radius: 14px;
+    }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      font-family: "Poppins", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--ink);
+      background: var(--cream);
+      line-height: 1.5;
+    }
+    img { display: block; max-width: 100%; }
+
+    /* ---------- Sheet ---------- */
+    .sa { min-height: 100vh; display: flex; justify-content: center; }
+    .sa__sheet {
+      width: 100%;
+      max-width: 480px;
+      background: #fff;
+      box-shadow: 0 0 40px rgba(58, 11, 5, .08);
+      position: relative;
+    }
+    .sa__progress { height: 4px; background: var(--line); position: sticky; top: 0; z-index: 5; }
+    .sa__progress-bar { height: 100%; width: 50%; background: var(--gold-deep); transition: width .4s ease; }
+
+    .sa__brand {
+      background: #fff;
+      text-align: center;
+      padding: 20px 20px 14px;
+      border-bottom: 1px solid var(--line);
+    }
+    .sa__logo { width: 96px; height: auto; margin: 0 auto; }
+    .sa__sub { margin: 8px 0 0; color: var(--muted); font-size: 14px; letter-spacing: .02em; }
+
+    .sa__form { padding: 22px 20px 32px; }
+
+    /* ---------- Hero card ---------- */
+    .sa-hero {
+      border-radius: 16px;
+      overflow: hidden;
+      background: var(--maroon-deep);
+      box-shadow: 0 12px 28px rgba(58, 11, 5, .22);
+    }
+    .sa-hero__media { position: relative; aspect-ratio: 4 / 5; overflow: hidden; background: var(--maroon-deep); }
+    /* Source is a 1672x941 banner; frame x 950–1505 so the orange panel and baked-in logo stay out of view */
+    .sa-hero__img { position: absolute; top: 0; left: -171.17%; width: 301.26%; max-width: none; height: auto; }
+    .sa-hero__media::after {
+      content: "";
+      position: absolute; inset: auto 0 0 0; height: 45%;
+      background: linear-gradient(to bottom, rgba(58, 11, 5, 0), var(--maroon-deep));
+      pointer-events: none;
+    }
+    .sa-hero__overlay { position: relative; z-index: 1; margin-top: -54px; padding: 0 16px 14px; text-align: center; }
+    .sa-hero__eyebrow {
+      margin: 0; color: var(--gold); font-size: 11px; font-weight: 600;
+      letter-spacing: .16em; text-transform: uppercase;
+    }
+    .sa-hero__caption { margin: 4px 0 0; color: var(--cream); font-size: 14px; }
+    .sa-nowrap { white-space: nowrap; }
+
+    .sa-hero__stats { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid rgba(232, 181, 106, .25); }
+    .sa-stat { padding: 16px 10px 18px; text-align: center; display: flex; flex-direction: column; align-items: center; }
+    .sa-stat + .sa-stat { border-left: 1px solid rgba(232, 181, 106, .25); }
+    .sa-stat__label { color: #E9D7C3; font-size: 10.5px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; min-height: 30px; }
+    .sa-stat__value { font-family: "Marcellus", Georgia, serif; font-weight: 400; color: var(--gold); font-size: 34px; line-height: 1.1; margin-top: 6px; }
+    .sa-stat__value sup { font-size: 14px; }
+    .sa-stat__sub { color: var(--cream); font-size: 13px; margin-top: 2px; }
+
+    .sa-hero__note { color: var(--muted); font-size: 11.5px; margin: 10px 2px 0; line-height: 1.55; }
+
+    /* ---------- Steps ---------- */
+    .sa__step[hidden] { display: none; }
+    .sa__step-title { font-family: "Marcellus", Georgia, serif; font-weight: 400; color: var(--maroon); font-size: 26px; line-height: 1.25; margin: 26px 0 6px; }
+    .sa__step-intro { color: var(--muted); font-size: 15px; margin: 0 0 20px; }
+    .sa__step-count { color: var(--gold-deep); font-size: 12px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; margin: 6px 0 0; }
+
+    .sa__field { margin-bottom: 18px; }
+    .sa__field label { display: block; font-size: 14px; font-weight: 500; margin-bottom: 8px; }
+    .sa__field input {
+      width: 100%; height: 50px; padding: 0 14px;
+      border: 1px solid var(--line); border-radius: 10px;
+      font: inherit; font-size: 16px; color: var(--ink); background: var(--cream-2);
+      transition: border-color .2s, box-shadow .2s;
+    }
+    .sa__field input::placeholder { color: #A8968A; }
+    .sa__field input:focus { outline: none; border-color: var(--gold-deep); box-shadow: 0 0 0 3px rgba(185, 120, 47, .18); background: #fff; }
+    .sa__field.is-invalid input { border-color: var(--error); }
+    .sa__err { display: none; color: var(--error); font-size: 12.5px; margin-top: 6px; }
+    .is-invalid > .sa__err, .is-invalid .sa__err { display: block; }
+
+    /* ---------- Qualification questions ---------- */
+    .sa-q { border: 0; padding: 0; margin: 0 0 22px; }
+    .sa-q legend { font-size: 15px; font-weight: 500; padding: 0; margin-bottom: 10px; }
+    .sa-q__choices { display: flex; flex-wrap: wrap; gap: 8px; }
+    .sa-choice { position: relative; }
+    .sa-choice input { position: absolute; opacity: 0; inset: 0; margin: 0; cursor: pointer; }
+    .sa-choice span {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 10px 14px; min-height: 42px;
+      border: 1px solid var(--line); border-radius: 999px;
+      background: var(--cream-2); font-size: 14px; cursor: pointer;
+      transition: background .15s, border-color .15s, color .15s;
+    }
+    .sa-choice input:focus-visible + span { box-shadow: 0 0 0 3px rgba(185, 120, 47, .3); }
+    .sa-choice input:checked + span { background: var(--maroon); border-color: var(--maroon); color: var(--cream); }
+    .sa-q.is-invalid .sa-choice span { border-color: #E3B3AE; }
+
+    /* ---------- Buttons ---------- */
+    .sa__actions { display: flex; gap: 10px; margin-top: 8px; }
+    .sa__btn {
+      flex: 1; height: 54px; border: 0; border-radius: 10px;
+      background: var(--maroon); color: var(--cream);
+      font: inherit; font-size: 16px; font-weight: 600; cursor: pointer;
+      transition: background .2s, transform .1s;
+    }
+    .sa__btn:hover { background: var(--maroon-deep); }
+    .sa__btn:active { transform: translateY(1px); }
+    .sa__btn[disabled] { opacity: .7; cursor: wait; }
+    .sa__btn--ghost { flex: 0 0 96px; background: transparent; color: var(--maroon); border: 1px solid var(--line); }
+    .sa__btn--ghost:hover { background: var(--cream-2); }
+    .sa__consent { color: var(--muted); font-size: 11.5px; text-align: center; margin: 14px 0 0; }
+
+    /* ---------- Thank you ---------- */
+    .sa-done { text-align: center; padding: 10px 0 0; }
+    .sa-done__icon { width: 64px; height: 64px; margin: 24px auto 0; border-radius: 50%; background: var(--maroon); color: var(--gold); display: grid; place-items: center; font-size: 30px; }
+
+    .sa__toast {
+      position: fixed; left: 50%; bottom: 20px; transform: translateX(-50%);
+      max-width: calc(100% - 32px); width: 440px;
+      background: var(--error); color: #fff; font-size: 14px;
+      padding: 12px 16px; border-radius: 10px; box-shadow: 0 8px 24px rgba(0,0,0,.2);
+      display: none; z-index: 20;
+    }
+    .sa__toast.is-show { display: block; }
+
+    .sa__footer { border-top: 1px solid var(--line); padding: 18px 20px 26px; text-align: center; color: var(--muted); font-size: 11.5px; }
+    .sa__footer p { margin: 2px 0; }
+
+    @media (min-width: 520px) {
+      .sa { padding: 0; }
+      .sa__form { padding: 24px 24px 36px; }
+    }
+  </style>
+</head>
+<body>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WK2HH7DV" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <main class="sa">
+    <div class="sa__sheet">
+      <div class="sa__progress" aria-hidden="true"><div class="sa__progress-bar" id="progressBar"></div></div>
+
+      <header class="sa__brand">
+        <img class="sa__logo" src="assets/logo-site.png" width="193" height="235" alt="Adhira &amp; Appa Coffee">
+        <p class="sa__sub">Franchise Opportunity · Pan India</p>
+      </header>
+
+      <form class="sa__form" id="leadForm" novalidate>
+        <!-- ===== Step 1: contact ===== -->
+        <section class="sa__step" id="step1" aria-labelledby="step1Title">
+          <div class="sa-hero">
+            <div class="sa-hero__media">
+              <img class="sa-hero__img" src="assets/ambassador-shruti.webp" width="1672" height="941" alt="Shruti Haasan, Brand Ambassador, Adhira &amp; Appa Coffee">
+            </div>
+            <div class="sa-hero__overlay">
+              <p class="sa-hero__eyebrow"><span class="sa-nowrap">Business Partner-Owned</span> · <span class="sa-nowrap">A&amp;A-Operated</span></p>
+              <p class="sa-hero__caption">Shruti Haasan · Brand Ambassador</p>
+            </div>
+            <div class="sa-hero__stats">
+              <div class="sa-stat">
+                <span class="sa-stat__label">Capital contribution</span>
+                <strong class="sa-stat__value">₹70L<sup>*</sup></strong>
+                <span class="sa-stat__sub">starting from</span>
+              </div>
+              <div class="sa-stat">
+                <span class="sa-stat__label">Monthly minimum payout protection</span>
+                <strong class="sa-stat__value">₹1.4L<sup>*</sup></strong>
+                <span class="sa-stat__sub">per month</span>
+              </div>
+            </div>
+          </div>
+          <p class="sa-hero__note">*Monthly Minimum Payout Protection, where contractually applicable, as per the 5-year franchise agreement: 2% of the capital contribution per month (₹1.4L on ₹70L for a Flagship Cafe; ₹1.8L on ₹90L for a Signature Cafe), or 10% of gross revenue, whichever is higher. Terms and conditions apply. Figures are indicative and vary by city, site and format.</p>
+
+          <h1 class="sa__step-title" id="step1Title">Apply for an Adhira &amp; Appa Franchise</h1>
+          <p class="sa__step-intro">Fill in your details and an Adhira &amp; Appa franchise advisor will reach out within 24 hours.</p>
+
+          <div class="sa__field">
+            <label for="name">Full name</label>
+            <input id="name" name="name" type="text" autocomplete="name" placeholder="Your full name">
+            <p class="sa__err">Please enter your full name.</p>
+          </div>
+          <div class="sa__field">
+            <label for="phone">Phone number</label>
+            <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+91">
+            <p class="sa__err">Please enter a valid 10-digit mobile number.</p>
+          </div>
+          <div class="sa__field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" placeholder="you@email.com">
+            <p class="sa__err">Please enter a valid email address.</p>
+          </div>
+          <div class="sa__field">
+            <label for="city">City / State</label>
+            <input id="city" name="city" type="text" autocomplete="address-level2" placeholder="e.g. Hyderabad, Telangana">
+            <p class="sa__err">Please enter your city.</p>
+          </div>
+
+          <div class="sa__actions">
+            <button type="button" class="sa__btn" id="nextBtn">Next</button>
+          </div>
+        </section>
+
+        <!-- ===== Step 2: qualification ===== -->
+        <section class="sa__step" id="step2" aria-labelledby="step2Title" hidden>
+          <p class="sa__step-count">Step 2 of 2</p>
+          <h2 class="sa__step-title" id="step2Title">A few quick questions</h2>
+          <p class="sa__step-intro">This helps your advisor share the right franchise model for you.</p>
+
+          <fieldset class="sa-q" data-required="background">
+            <legend>1. What best describes you?</legend>
+            <div class="sa-q__choices">
+              <label class="sa-choice"><input type="radio" name="background" value="First-time business owner"><span>First-time business owner</span></label>
+              <label class="sa-choice"><input type="radio" name="background" value="Existing F&amp;B business"><span>Existing F&amp;B business</span></label>
+              <label class="sa-choice"><input type="radio" name="background" value="Multi-unit operator"><span>Multi-unit operator</span></label>
+              <label class="sa-choice"><input type="radio" name="background" value="Investor / other business"><span>Investor / other business</span></label>
+            </div>
+            <p class="sa__err">Please choose one option.</p>
+          </fieldset>
+
+          <fieldset class="sa-q" data-required="investment">
+            <legend>2. What capital contribution range are you considering?</legend>
+            <div class="sa-q__choices">
+              <label class="sa-choice"><input type="radio" name="investment" value="₹60L - ₹80L"><span>₹60L – ₹80L</span></label>
+              <label class="sa-choice"><input type="radio" name="investment" value="₹80L - ₹1 Cr"><span>₹80L – ₹1 Cr</span></label>
+              <label class="sa-choice"><input type="radio" name="investment" value="₹1 Cr - ₹3 Cr"><span>₹1 Cr – ₹3 Cr</span></label>
+              <label class="sa-choice"><input type="radio" name="investment" value="₹3 Cr+"><span>₹3 Cr+</span></label>
+            </div>
+            <p class="sa__err">Please choose one option.</p>
+          </fieldset>
+
+          <fieldset class="sa-q" data-required="location">
+            <legend>3. Which franchise model interests you?</legend>
+            <div class="sa-q__choices">
+              <label class="sa-choice"><input type="radio" name="location" value="Flagship Cafe"><span>Flagship Cafe · ₹70L</span></label>
+              <label class="sa-choice"><input type="radio" name="location" value="Signature Cafe"><span>Signature Cafe · ₹90L</span></label>
+              <label class="sa-choice"><input type="radio" name="location" value="Master Franchise"><span>Master Franchise · ₹1–3 Cr</span></label>
+              <label class="sa-choice"><input type="radio" name="location" value="Not sure yet"><span>Not sure yet</span></label>
+            </div>
+            <p class="sa__err">Please choose one option.</p>
+          </fieldset>
+
+          <fieldset class="sa-q" data-required="timeline">
+            <legend>4. When are you planning to open your cafe?</legend>
+            <div class="sa-q__choices">
+              <label class="sa-choice"><input type="radio" name="timeline" value="Immediately"><span>Immediately</span></label>
+              <label class="sa-choice"><input type="radio" name="timeline" value="1-3 months"><span>1–3 months</span></label>
+              <label class="sa-choice"><input type="radio" name="timeline" value="3-6 months"><span>3–6 months</span></label>
+              <label class="sa-choice"><input type="radio" name="timeline" value="6+ months"><span>6+ months</span></label>
+            </div>
+            <p class="sa__err">Please choose one option.</p>
+          </fieldset>
+
+          <fieldset class="sa-q" data-required="next_step">
+            <legend>5. How would you like to proceed?</legend>
+            <div class="sa-q__choices">
+              <label class="sa-choice"><input type="radio" name="next_step" value="Schedule Presentation"><span><span aria-hidden="true">📅</span> Schedule Presentation</span></label>
+              <label class="sa-choice"><input type="radio" name="next_step" value="Send Opportunity Deck"><span><span aria-hidden="true">📘</span> Send Opportunity Deck</span></label>
+              <label class="sa-choice"><input type="radio" name="next_step" value="WhatsApp Details"><span><span aria-hidden="true">💬</span> WhatsApp Details</span></label>
+              <label class="sa-choice"><input type="radio" name="next_step" value="Request a Call"><span><span aria-hidden="true">📞</span> Request a Call</span></label>
+            </div>
+            <p class="sa__err">Please choose one option.</p>
+          </fieldset>
+
+          <div class="sa__actions">
+            <button type="button" class="sa__btn sa__btn--ghost" id="backBtn">Back</button>
+            <button type="submit" class="sa__btn" id="submitBtn">Submit Application →</button>
+          </div>
+          <p class="sa__consent">By submitting, you agree to be contacted by Adhira &amp; Appa Coffee by call, SMS, email or WhatsApp.</p>
+        </section>
+
+        <!-- ===== Done ===== -->
+        <section class="sa__step sa-done" id="stepDone" hidden>
+          <div class="sa-done__icon" aria-hidden="true">✓</div>
+          <h2 class="sa__step-title">Thank you!</h2>
+          <p class="sa__step-intro">Your application has been received. An Adhira &amp; Appa franchise advisor will reach out within 24 hours.</p>
+        </section>
+      </form>
+
+      <footer class="sa__footer">
+        <p>Adhira &amp; Appa Coffee · An EBG FoodWorks brand, powered by EBG Group</p>
+        <p>© 2026 Adhira &amp; Appa Coffee. A unit of Kanniga Foods and Beverages Private Limited.</p>
+      </footer>
+    </div>
+  </main>
+
+  <div class="sa__toast" id="toast" role="alert"></div>
+
+  <script>
+    (function () {
+      // Same endpoint and payload keys as the current franchise site
+      const SUBMIT_URL = "/submit";
+      const THANK_YOU_URL = "/thank-you";
+
+      const form = document.getElementById("leadForm");
+      const step1 = document.getElementById("step1");
+      const step2 = document.getElementById("step2");
+      const stepDone = document.getElementById("stepDone");
+      const bar = document.getElementById("progressBar");
+      const submitBtn = document.getElementById("submitBtn");
+      const toast = document.getElementById("toast");
+
+      const rules = {
+        name: v => v.trim().length >= 2,
+        phone: v => /^[6-9]\d{9}$/.test(normalisePhone(v)),
+        email: v => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim()),
+        city: v => v.trim().length >= 2
+      };
+
+      function normalisePhone(v) {
+        const d = v.replace(/\D/g, "");
+        return d.length === 12 && d.startsWith("91") ? d.slice(2) : d.replace(/^0/, "");
+      }
+
+      function setInvalid(el, bad) { el.classList.toggle("is-invalid", bad); }
+
+      function validateStep1() {
+        let firstBad = null;
+        Object.keys(rules).forEach(name => {
+          const input = form.elements[name];
+          const bad = !rules[name](input.value);
+          setInvalid(input.closest(".sa__field"), bad);
+          if (bad && !firstBad) firstBad = input;
+        });
+        if (firstBad) firstBad.focus();
+        return !firstBad;
+      }
+
+      function validateStep2() {
+        let firstBad = null;
+        step2.querySelectorAll(".sa-q").forEach(q => {
+          const bad = !form.querySelector(`input[name="${q.dataset.required}"]:checked`);
+          setInvalid(q, bad);
+          if (bad && !firstBad) firstBad = q;
+        });
+        if (firstBad) firstBad.scrollIntoView({ behavior: "smooth", block: "center" });
+        return !firstBad;
+      }
+
+      function show(step, progress) {
+        [step1, step2, stepDone].forEach(s => { s.hidden = s !== step; });
+        bar.style.width = progress;
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+
+      function showToast(msg) {
+        toast.textContent = msg;
+        toast.classList.add("is-show");
+        clearTimeout(showToast.t);
+        showToast.t = setTimeout(() => toast.classList.remove("is-show"), 5000);
+      }
+
+      // Clear an error as soon as the field is fixed
+      form.addEventListener("input", e => {
+        const field = e.target.closest(".sa__field");
+        if (field && field.classList.contains("is-invalid") && rules[e.target.name](e.target.value)) setInvalid(field, false);
+      });
+      form.addEventListener("change", e => {
+        const q = e.target.closest(".sa-q");
+        if (q) setInvalid(q, false);
+      });
+
+      document.getElementById("nextBtn").addEventListener("click", () => {
+        if (!validateStep1()) return;
+        window.dataLayer && dataLayer.push({ event: "lead_step1_complete" });
+        show(step2, "100%");
+      });
+      document.getElementById("backBtn").addEventListener("click", () => show(step1, "50%"));
+
+      form.addEventListener("submit", async e => {
+        e.preventDefault();
+        if (!validateStep1()) { show(step1, "50%"); return; }
+        if (!validateStep2()) return;
+
+        const fd = new FormData(form);
+        const qs = new URLSearchParams(window.location.search);
+        const data = {
+          name: fd.get("name").trim(),
+          phone: normalisePhone(fd.get("phone")),
+          email: fd.get("email").trim(),
+          city: fd.get("city").trim(),
+          investment: fd.get("investment") || "",
+          location: fd.get("location") || "",
+          timeline: fd.get("timeline") || "",
+          background: fd.get("background") || "",
+          next_step: fd.get("next_step") || "",
+          brand: "Adhira & Appa Coffee",
+          form_source: "Apply Form",
+          page_url: window.location.href,
+          utm_source: qs.get("utm_source") || "",
+          utm_medium: qs.get("utm_medium") || "",
+          utm_campaign: qs.get("utm_campaign") || "",
+          utm_term: qs.get("utm_term") || "",
+          utm_content: qs.get("utm_content") || ""
+        };
+
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Submitting…";
+        try {
+          const res = await fetch(SUBMIT_URL, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(data)
+          });
+          const result = await res.json();
+          if (!result.success) throw new Error(result.message || "Lead could not be submitted. Please try again.");
+
+          window.dataLayer && dataLayer.push({ event: "lead_submit", lead_model: data.location, lead_investment: data.investment });
+          show(stepDone, "100%");
+          setTimeout(() => { window.location.href = THANK_YOU_URL; }, 2500);
+        } catch (err) {
+          console.error("Lead form submit failed:", err);
+          showToast(err.message && !/fetch|JSON/i.test(err.message) ? err.message : "Something went wrong. Please check your internet and try again.");
+        } finally {
+          submitBtn.disabled = false;
+          submitBtn.textContent = "Submit Application →";
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
