@@ -303,9 +303,8 @@
 
   <script>
     (function () {
-      // Same endpoint and payload keys as the current franchise site
+      // Same endpoint and payload keys as the current franchise site; on Vercel, vercel.json proxies /submit to it
       const SUBMIT_URL = "/submit";
-      const THANK_YOU_URL = "/thank-you";
 
       const form = document.getElementById("leadForm");
       const step1 = document.getElementById("step1");
@@ -421,7 +420,6 @@
 
           window.dataLayer && dataLayer.push({ event: "lead_submit", lead_investment: data.investment });
           show(stepDone, "100%");
-          setTimeout(() => { window.location.href = THANK_YOU_URL; }, 2500);
         } catch (err) {
           console.error("Lead form submit failed:", err);
           showToast(err.message && !/fetch|JSON/i.test(err.message) ? err.message : "Something went wrong. Please check your internet and try again.");
