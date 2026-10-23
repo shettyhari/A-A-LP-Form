@@ -266,35 +266,13 @@
             <p class="sa__err">Please choose one option.</p>
           </fieldset>
 
-          <fieldset class="sa-q" data-required="location">
-            <legend>3. Which franchise model interests you?</legend>
-            <div class="sa-q__choices">
-              <label class="sa-choice"><input type="radio" name="location" value="Flagship Cafe"><span>Flagship Cafe · ₹70L</span></label>
-              <label class="sa-choice"><input type="radio" name="location" value="Signature Cafe"><span>Signature Cafe · ₹90L</span></label>
-              <label class="sa-choice"><input type="radio" name="location" value="Master Franchise"><span>Master Franchise · ₹1–3 Cr</span></label>
-              <label class="sa-choice"><input type="radio" name="location" value="Not sure yet"><span>Not sure yet</span></label>
-            </div>
-            <p class="sa__err">Please choose one option.</p>
-          </fieldset>
-
           <fieldset class="sa-q" data-required="timeline">
-            <legend>4. When are you planning to open your cafe?</legend>
+            <legend>3. When are you planning to open your cafe?</legend>
             <div class="sa-q__choices">
               <label class="sa-choice"><input type="radio" name="timeline" value="Immediately"><span>Immediately</span></label>
               <label class="sa-choice"><input type="radio" name="timeline" value="1-3 months"><span>1–3 months</span></label>
               <label class="sa-choice"><input type="radio" name="timeline" value="3-6 months"><span>3–6 months</span></label>
               <label class="sa-choice"><input type="radio" name="timeline" value="6+ months"><span>6+ months</span></label>
-            </div>
-            <p class="sa__err">Please choose one option.</p>
-          </fieldset>
-
-          <fieldset class="sa-q" data-required="next_step">
-            <legend>5. How would you like to proceed?</legend>
-            <div class="sa-q__choices">
-              <label class="sa-choice"><input type="radio" name="next_step" value="Schedule Presentation"><span><span aria-hidden="true">📅</span> Schedule Presentation</span></label>
-              <label class="sa-choice"><input type="radio" name="next_step" value="Send Opportunity Deck"><span><span aria-hidden="true">📘</span> Send Opportunity Deck</span></label>
-              <label class="sa-choice"><input type="radio" name="next_step" value="WhatsApp Details"><span><span aria-hidden="true">💬</span> WhatsApp Details</span></label>
-              <label class="sa-choice"><input type="radio" name="next_step" value="Request a Call"><span><span aria-hidden="true">📞</span> Request a Call</span></label>
             </div>
             <p class="sa__err">Please choose one option.</p>
           </fieldset>
@@ -417,10 +395,9 @@
           email: fd.get("email").trim(),
           city: fd.get("city").trim(),
           investment: fd.get("investment") || "",
-          location: fd.get("location") || "",
+          location: "",
           timeline: fd.get("timeline") || "",
           background: fd.get("background") || "",
-          next_step: fd.get("next_step") || "",
           brand: "Adhira & Appa Coffee",
           form_source: "Apply Form",
           page_url: window.location.href,
@@ -442,7 +419,7 @@
           const result = await res.json();
           if (!result.success) throw new Error(result.message || "Lead could not be submitted. Please try again.");
 
-          window.dataLayer && dataLayer.push({ event: "lead_submit", lead_model: data.location, lead_investment: data.investment });
+          window.dataLayer && dataLayer.push({ event: "lead_submit", lead_investment: data.investment });
           show(stepDone, "100%");
           setTimeout(() => { window.location.href = THANK_YOU_URL; }, 2500);
         } catch (err) {
